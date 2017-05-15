@@ -1,11 +1,10 @@
 var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");//css
 var providePlugin = new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' });
 module.exports = {
     entry: './src/js/entry.jsx',
     output: {
-        path: './static/',
-        publicPath: 'http://localhost:8080/static/',
+        path: __dirname + '/static/',
+	publicPath: 'http://localhost:8080/static/',
         filename: 'index.js'
     },
     module: {
@@ -36,8 +35,7 @@ module.exports = {
 		extensions: ['.js','.jsx'],
 	},
     plugins: [
-        providePlugin,
-        new webpack.NoEmitOnErrorsPlugin()
+        providePlugin
     ]
 }
 
