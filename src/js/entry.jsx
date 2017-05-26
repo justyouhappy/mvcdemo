@@ -23,7 +23,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <input value={this.props.value} onChange={this.setvalue}></input>
+                <input value={this.props.inpValue} onChange={this.setvalue}></input>
             </div>
         );
     }

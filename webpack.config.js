@@ -4,7 +4,7 @@ module.exports = {
     entry: './src/js/entry.jsx',
     output: {
         path: __dirname + '/static/',
-	publicPath: 'http://localhost:8080/static/',
+        publicPath: 'http://localhost:8080/static/',
         filename: 'index.js'
     },
     module: {
@@ -31,9 +31,9 @@ module.exports = {
         inline: true,//注意：不写hot: true，否则浏览器无法自动更新；也不要写colors:true，progress:true等，webpack2.x已不支持这些
     },
     resolve: {
-		modules: ['node_modules'],
-		extensions: ['.js','.jsx'],
-	},
+        modules: ['node_modules'],
+        extensions: ['.js', '.jsx'],
+    },
     plugins: [
         providePlugin
     ]
